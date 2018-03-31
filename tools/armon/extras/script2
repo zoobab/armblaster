@@ -1,0 +1,8 @@
+ew 40021018 3c
+# GPIO A out
+ew 40010804 33333333
+# GPIO A PA8 on
+ew 4001080c ffff
+# GPIO A PA8 on
+dw 40010800 40
+

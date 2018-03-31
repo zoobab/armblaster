@@ -1,0 +1,16 @@
+echo off
+
+# PB8-15‚ğ‘S•”o—Í
+  p gpiob.crh 33333333
+
+label L1
+# PB8-15‚ğLOW
+  p gpiob.odr 0010
+  p gpiob.idr
+  sleep 100
+# PB8-15‚ğHIGH
+  p gpiob.odr ff10
+  p gpiob.idr
+  sleep 100
+loop L1 20
+

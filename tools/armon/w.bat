@@ -1,0 +1,1 @@
+armboot ..\firmware\main.hex

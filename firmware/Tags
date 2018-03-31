@@ -1,0 +1,12 @@
+hw_config.c
+main.c
+monit.c
+stm32f10x_it.c
+syscalls.c
+usercmd.c
+
+usb_desc.c
+usb_endp.c
+usb_istr.c
+usb_prop.c
+usb_pwr.c

@@ -1,0 +1,82 @@
+■ ディレクトリ構成
+
+ armblaster-+
+            |
+            +- firmware\       STBEE MINI用ファームウェア.
+            +- HW\             STBEE MINI用ファームウェアのビルドに必要なライブラリ
+            +- inc\            STBEE MINI用ファームウェアのビルドに必要なヘッダー
+            |
+            +- openocd -+      STBEE MINI用 openocd.exe と hidblast.dllソース.
+            |           |
+            |           +--helper\   ヘッダーファイル.
+            |           +--jtag\     ヘッダーファイル.
+            |           |
+            |           +--openocd_patch\  openocd本体側作成用の改造点
+            |
+            |
+            |
+            +- tools ---+--armon\      armon (動作確認用モニタ)
+                        |
+                        +--avrwriter\  AVRライター (HIDaspx互換)
+                        |
+                        +--picwriter\  PICライター (pic18spx互換)
+                        |
+                        +--picwriter24\ PIC24Fライター
+                        |
+                        +--bin\        上記toolsの実行ファイルのみを収録
+
+■ インストール方法
+
+  インストールは不要です。
+
+　WindowsXPにて、上記ディレクトリを任意ドライブに展開してください。
+
+  展開する場合、armblasterより上位のPATH名については、 空白文字や漢字コードを含めないように気をつけてください。
+
+
+■ アン・インストール方法
+
+  armblaster 以下のディレクトリをそのまま削除することでアン・インストール出来ます。
+
+
+■ 使用方法
+
+  （１）
+  まず、STBEE MINI にファームウェアを書き込む必要があります。
+  armblaster/firmware/main-2000.hex : armon/armboot を使用する場合のHEXファイルです。
+  armblaster/firmware/main-3000.hex : DFUを使用する場合のHEXファイルです。
+
+  armon/armboot で書き込む場合は、以下のようにしてください。
+  C:> armboot main-2000.hex
+
+  DFUを使用する場合はSTBEE MINIに付属するdfuw.exe を使って書き込んでください。
+
+
+  STBEE MINI上のファームウェア動作確認を行うには、
+  armblaster/tools/armon/armon.exe を起動して、armonのコマンドが実行出来ているかどうかを
+　確認します。
+例）
+  C:> armon
+  ARM> l
+  ARM> q
+
+
+  （２）
+  openocd に関しては、 armblaster/openocd/ ディレクトリにて、
+  ocd.bat (STM32用) もしくは ocd2.bat (LPC2388用) のバッチファイルを起動することでopenocdを起動すること
+  ができます。WindowsXPのファイアーウォール警告が出る場合は、ブロック解除する必要があります。
+
+  flash.bat のバッチを使用すると、STM32にhexファイルを書き込む処理までバッチで行うことが出来ます。
+
+  ARM以外のライターに関しては、 armblaster/tools/bin/ 以下に実行ファイルが纏められています。
+
+
+
+■ 再コンパイル方法
+
+  firmwareを再コンパイルする場合は、CodeSourcery G++ Liteを使用してください。
+  Makefile は firmwareディレクトリに置いています。
+  main-2000.hex とmain-3000.hex の両方をビルドするバッチファイルは mkall.bat という
+  ファイルを用意しています。
+
+  WindowsXP側のツールを再コンパイルする場合は、MinGW-gcc を使用してください。
