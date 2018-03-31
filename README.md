@@ -30,3 +30,4 @@ Links
 
 * Mirrored from: http://hp.vector.co.jp/authors/VA000177/html/arm_blaster.html
 * Buy an STBee from StrawberryLinux: https://strawberry-linux.com/catalog/items?code=32105
+* Mirror by Iruka: https://github.com/iruka-/ATMEL_AVR/blob/master/md/arm_blaster.md
