@@ -1,6 +1,13 @@
 Armblaster, yet another STM32 jtag cable
 ========================================
 
+Pictures
+========
+
+![armblaster frisk jtag](pics/frisk-jtag.jpg "armblaster frisk jtag")
+![armblaster frisk jtag bis](pics/frisk1.jpg "armblaster frisk jtag bis")
+![armblaster frisk jtag ter](pics/frisk2.jpg "armblaster frisk jtag ter")
+
 Compilation
 ===========
 
@@ -21,4 +28,5 @@ Software
 Links
 =====
 
-Mirrored from: http://hp.vector.co.jp/authors/VA000177/html/arm_blaster.html
+* Mirrored from: http://hp.vector.co.jp/authors/VA000177/html/arm_blaster.html
+* Buy an STBee from StrawberryLinux: https://strawberry-linux.com/catalog/items?code=32105
