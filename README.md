@@ -1,6 +1,11 @@
 Armblaster, yet another STM32 jtag cable
 ========================================
 
+Compilation
+===========
+
+If you have docker, you can run `./build.sh`, which will build the firmware in the `binaries/` directory.
+
 Hardware
 ========
 
