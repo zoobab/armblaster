@@ -25,6 +25,12 @@ Software
 
 * OpenOCD support
 
+Todo
+====
+
+* flashing instructions
+* bluepill support
+
 Links
 =====
 
